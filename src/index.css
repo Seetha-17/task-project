@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+body{
+    margin: 0;
+    padding:0;
+    font-family: "Open Sans", sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.main-content {
+    margin-left: 16rem; /* 256px for sidebar width */
+    padding: 1rem;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+/* For better mobile responsiveness */
+@media (max-width: 640px) {
+    .graph-container {
+        width: 100% !important;
+        overflow-x: auto;
+    }
+    
+    .stats-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
